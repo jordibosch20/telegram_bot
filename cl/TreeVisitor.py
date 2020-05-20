@@ -11,6 +11,7 @@ class TreeVisitor(SkyVisitor):
     def __init__(self):
         self.nivell = 0
         self.dict = {}
+
     def visitSkyline(self, ctx:SkyParser.SkylineContext):
         #la idea es que la funcio visit et retorni els edificis i els 
         #afegeixi al diccionari de la classe amb el nom de la variable parsejada
@@ -26,6 +27,9 @@ class TreeVisitor(SkyVisitor):
        	for i in self.dict:
        	    print(i,"->",self.dict[i])
 
+
+        #Si aqui fes un return -> tornaria el resultat a test1.py no?
+
     def visitSimple(self,ctx:SkyParser.SimpleContext):
         n = [x for x in ctx.getChildren()]
         print(n)
@@ -36,13 +40,14 @@ class TreeVisitor(SkyVisitor):
         n = [x.getText() for x in ctx.getChildren()]
         print(n)
         n = [x for x in ctx.getChildren()]
-        if hasattr(n[2],'getSymbol'):
+        '''if hasattr(n[2],'getSymbol'):
             #Significa que estem sumant numero
             self.dict[n[0].getText()]
-            #suposem que ja esta guardat com a objecte de la classe Sky
-            #llavors jo el que faria, seria que aquesta classe tingues un metode sumarditancia,
-            #restar distancia, multiplicardistancia, sumarsky, multiplicarsky
-        else:
+            #suposem que ja esta guardat al dict com a objecte de la classe Sky
+            #llavors jo el que faria, seria que aquesta classe tingues un metode sumardistancia,
+            #restar distancia, multiplicardistancia, sumarsky, multiplicarsky i aixi dons calculem
+            #la suma aqui i guardem l'objecte resultant en el diccionari
+        else:'''
 
 
     def visitAleatori(self,ctx:SkyParser.AleatoriContext):
@@ -75,11 +80,11 @@ class TreeVisitor(SkyVisitor):
             w_1 = w*rand.random()
             pos_inicial_1 = (xmax-xmin-w)*(rand.random())
             #Escolleixo una posicio inicial random que se segur que compleix restriccions
-            edifici = [xmin + pos_inicial_1,h_1,pos_inicial_1+xmin+w_1]
+            edifici = (xmin + pos_inicial_1,h_1,pos_inicial_1+xmin+w_1)
             resultats.append(edifici)
         return resultats
 
     def visitEdifici(self,ctx:SkyParser.EdificiContext):
         n = [x.getText() for x in ctx.getChildren()] 
-        edifici_llista = [int(n[1]),int(n[3]),int(n[5])]
+        edifici_llista = (int(n[1]),int(n[3]),int(n[5]))
         return [edifici_llista]
