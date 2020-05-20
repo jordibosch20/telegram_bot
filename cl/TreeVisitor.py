@@ -31,6 +31,20 @@ class TreeVisitor(SkyVisitor):
         print(n)
         return (self.visit(next(ctx.getChildren())))
 
+    def visitOperacio(self,ctx:SkyParser.OperacioContext):
+        print("holaaa")
+        n = [x.getText() for x in ctx.getChildren()]
+        print(n)
+        n = [x for x in ctx.getChildren()]
+        if hasattr(n[2],'getSymbol'):
+            #Significa que estem sumant numero
+            self.dict[n[0].getText()]
+            #suposem que ja esta guardat com a objecte de la classe Sky
+            #llavors jo el que faria, seria que aquesta classe tingues un metode sumarditancia,
+            #restar distancia, multiplicardistancia, sumarsky, multiplicarsky
+        else:
+
+
     def visitAleatori(self,ctx:SkyParser.AleatoriContext):
         n = [x for x in ctx.getChildren()]
         return (self.visit(n[1]))
