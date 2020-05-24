@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
 class Skyline():
     def __init__(self, edificis = []):
         #Per defecte si no passem el parametre edificis s'inicialitzara a []
@@ -133,13 +136,40 @@ class Skyline():
                 intervals_definitiu.append((a,maxim,b))
 
         print("els intervals definitius son",intervals_definitiu)
+        self.edificis = intervals_definitiu
 
     def escriu(self):
         for i in self.edificis:
             print(i)
     #en aquesta variable hi tindrem cadascun dels edificis que diguem
+    def dibuixar(self):
+        #We have to loop over all rectangles
+        fig, ax = plt.subplots()
+        for i in self.edificis:
+            ax.add_patch(
+                 patches.Rectangle(
+                    (i[0], 0),
+                    (i[2]-i[0]),
+                    i[1],
+                    edgecolor = 'red',
+                    facecolor = 'blue',
+                    fill=True
+                 ) )
+        ax.plot()
+        plt.show()
+
+    def area_alcada(self):
+        area = 0
+        alcada = 0
+        for i in self.edificis:
+            area += (i[2]-i[0])*(i[1])
+            alcada = max(alcada,i[1])
+        return area,alcada
+
 
 s1 = Skyline([(0,3,1),(1,4,2)])
 s1.ordenar()
 s2 = Skyline([(2,5,3),(0.5,3.5,2.5)])
 s1.interseccio_skyline(s2)
+s1.dibuixar()
+print(s1.area_alcada())
