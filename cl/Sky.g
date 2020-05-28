@@ -1,10 +1,13 @@
 grammar Sky;
 root : skyline EOF;
-skyline :  VAR ASSIG ((simple|compost|aleatori) | operacio);
+skyline :  VAR ASSIG (crear | operacio) | operacio;
 
-operacio: VAR (MES|MENYS|MULT) (var|NUM);
+crear: simple|compost|aleatori;
 
-var : VAR;
+mirall: MENYS VAR;
+
+operacio: '-' operacio | operacio ('*'|'+'|'-') (NUM|operacio)  |(crear|VAR);	
+
 
 simple : edifici;
 compost : OC edifici (COMA edifici)* TC;

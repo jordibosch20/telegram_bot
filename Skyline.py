@@ -5,8 +5,6 @@ class Skyline():
     def __init__(self, edificis = []):
         #Per defecte si no passem el parametre edificis s'inicialitzara a []
        self.edificis = edificis
-       print(self.edificis)
-       self.ordenar()
     
     @staticmethod
     def order_minim(x):
@@ -35,7 +33,7 @@ class Skyline():
             h = valor[1]
             xmax = valor[2] + num
             self.edificis[counter] = (xmin,h,xmax)
-    
+
     def resta_numero(self,num):
         #Fem una translació de num
         for counter,valor in enumerate(self.edificis):
@@ -61,7 +59,7 @@ class Skyline():
                 edificis1.append((xmin,h,xmax))
         
         self.edificis = edificis1
-        self.ordenar()
+
 
     def reflectir(self):
         #Suposem que ja ho hem ordenat
@@ -73,72 +71,21 @@ class Skyline():
             xmaxfinal = valor[0] + desplacament - 2*(valor[0]-self.punt_minim)
             self.edificis[counter] = (xminfinal,h,xmaxfinal)
 
-    def suma_skyline(self,sky_aux):
-        #Rep un sky i l'afegeix al sky que ja tenim
+    def get_ed(self):
+        return self.edificis
+
+
+    def unio(self,sky_aux):
         for i in sky_aux.edificis:
-            #estem dins el vector de sky auxiliar
-            self.append(i)
-            #Hi ha d'haver maneres mes optimes, no?
-            self.ordenar()
-            #Amb aixo aconseguim O(nlogn), laltre metedo(bisect) serie O(logn)
+            self.edificis.append(i)
 
-    def solapament(self,i1,i2):
-        #funcio que ens retorna si dos intervals tenen solapament
-        #i1 = [a,alcada,b]
-        #i2 = [c,alcada,d]
-        if (not(i1[2]<=i2[0] or i2[2]<=i2[0])):
-            return True
-            #retorna cert si es solapen
-        return False
-
-    def interseccio_punt_rectangle(self, punt, r):
-        if (punt < r[2] and punt > r[0]):
-            return True
-        return False
-
-    def interseccio_skyline(self,sky_aux):
-        #Interesecar es com posar les dues figures i quedarnos amb el nou sky que veuriem
-        #Realitzarem una busca binaria, podriem utilitzar el modul bisect, pero l'implementarem nosatlres
-        intervals_1 = sky_aux.edificis
-        intervals_2 = self.edificis
-        #El que fare sera ordenar el nou skyline i mirar quins es solapen
-        intervals_final = intervals_2 + intervals_1
-        intervals_final.sort(key=self.order_minim)
-        intervals_out = []
-        intervals_definitiu = []
-        for i in intervals_final:
-            intervals_out.append(i[0])
-            intervals_out.append(i[2])
-        
-        intervals_out.sort() #Ara estan ordenats pero repetits
-
-        lookup = set()  # a temporary lookup set
-        intervals_out = [x for x in intervals_out if x not in lookup and lookup.add(x) is None]
-        #Em desfaig de les duplicitats conservant l'ordre.
-
-        print("INTERVAL OUT ES",intervals_out)
-        #intervals_out es un set amb tots els llocs on pot canviar lalcada!
-        longitud = len(intervals_out)
-        for counter, value in enumerate(intervals_out):
-            if (counter < longitud - 1):
-                a = value
-                b = intervals_out[counter+1]
-                mig = float(a + b) / float(2)
-                print("a i b son", a, "->",b,"i el punt mig es",mig)
-        #Volem saber l'alcada del punt mig
-        
-        #Ho fare a lo bestia pero hi podria haver millors implementacions, utilizant que 
-        #la llista esta ordenada i fent binaria
-                maxim = 0
-                for i in intervals_final:
-                    if self.interseccio_punt_rectangle(mig,i):
-                        maxim = max(maxim,i[1])
-                intervals_definitiu.append((a,maxim,b))
-
-        print("els intervals definitius son",intervals_definitiu)
-        self.edificis = intervals_definitiu
+    def interseccio(self,sky_aux):
+        for i in sky_aux.edificis:
+            self.edificis.append(i)
+            print("encalladus amb",i)
 
     def escriu(self):
+        print("estic escrivint")
         for i in self.edificis:
             print(i)
     #en aquesta variable hi tindrem cadascun dels edificis que diguem
@@ -166,10 +113,3 @@ class Skyline():
             alcada = max(alcada,i[1])
         return area,alcada
 
-
-s1 = Skyline([(0,3,1),(1,4,2)])
-s1.ordenar()
-s2 = Skyline([(2,5,3),(0.5,3.5,2.5)])
-s1.interseccio_skyline(s2)
-s1.dibuixar()
-print(s1.area_alcada())

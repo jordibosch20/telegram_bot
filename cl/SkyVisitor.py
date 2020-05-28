@@ -19,13 +19,18 @@ class SkyVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by SkyParser#operacio.
-    def visitOperacio(self, ctx:SkyParser.OperacioContext):
+    # Visit a parse tree produced by SkyParser#crear.
+    def visitCrear(self, ctx:SkyParser.CrearContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by SkyParser#var.
-    def visitVar(self, ctx:SkyParser.VarContext):
+    # Visit a parse tree produced by SkyParser#mirall.
+    def visitMirall(self, ctx:SkyParser.MirallContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SkyParser#operacio.
+    def visitOperacio(self, ctx:SkyParser.OperacioContext):
         return self.visitChildren(ctx)
 
 
