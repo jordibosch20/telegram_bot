@@ -1,0 +1,4 @@
+antlr4-python3-runtime==4.8
+decorator==4.4.2
+matplotlib==3.0.3
+python-telegram-bot==12.7
