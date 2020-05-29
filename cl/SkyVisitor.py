@@ -24,11 +24,6 @@ class SkyVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by SkyParser#mirall.
-    def visitMirall(self, ctx:SkyParser.MirallContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by SkyParser#operacio.
     def visitOperacio(self, ctx:SkyParser.OperacioContext):
         return self.visitChildren(ctx)

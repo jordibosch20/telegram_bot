@@ -4,9 +4,7 @@ skyline :  VAR ASSIG (crear | operacio) | operacio;
 
 crear: simple|compost|aleatori;
 
-mirall: MENYS VAR;
-
-operacio: '-' operacio | operacio ('*'|'+'|'-') (NUM|operacio)  |(crear|VAR);	
+operacio: '(' operacio ')'| '-' (VAR|crear|operacio) | operacio ('*'|'+'|'-') (NUM|operacio) | (crear|VAR);	
 
 
 simple : edifici;
@@ -20,7 +18,7 @@ MES : '+';
 MENYS : '-';
 MULT : '*';
 
-VAR : ('a'..'z' | 'A'..'Z')+ ;
+VAR : ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z' | NUM)* ;
 
 OC : '[';
 TC : ']';

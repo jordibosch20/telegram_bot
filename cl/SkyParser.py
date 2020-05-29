@@ -8,36 +8,37 @@ import sys
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\20")
-        buf.write("b\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
-        buf.write("\t\b\4\t\t\t\4\n\t\n\4\13\t\13\3\2\3\2\3\2\3\3\3\3\3\3")
-        buf.write("\3\3\5\3\36\n\3\3\3\5\3!\n\3\3\4\3\4\3\4\5\4&\n\4\3\5")
-        buf.write("\3\5\3\5\3\6\3\6\3\6\3\6\3\6\5\6\60\n\6\5\6\62\n\6\3\6")
-        buf.write("\3\6\3\6\3\6\5\68\n\6\7\6:\n\6\f\6\16\6=\13\6\3\7\3\7")
-        buf.write("\3\b\3\b\3\b\3\b\7\bE\n\b\f\b\16\bH\13\b\3\b\3\b\3\t\3")
-        buf.write("\t\3\t\3\t\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\13\3\13\3")
-        buf.write("\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\2\3\n\f\2")
-        buf.write("\4\6\b\n\f\16\20\22\24\2\3\3\2\3\5\2`\2\26\3\2\2\2\4 ")
-        buf.write("\3\2\2\2\6%\3\2\2\2\b\'\3\2\2\2\n\61\3\2\2\2\f>\3\2\2")
-        buf.write("\2\16@\3\2\2\2\20K\3\2\2\2\22O\3\2\2\2\24W\3\2\2\2\26")
-        buf.write("\27\5\4\3\2\27\30\7\2\2\3\30\3\3\2\2\2\31\32\7\6\2\2\32")
-        buf.write("\35\7\13\2\2\33\36\5\6\4\2\34\36\5\n\6\2\35\33\3\2\2\2")
-        buf.write("\35\34\3\2\2\2\36!\3\2\2\2\37!\5\n\6\2 \31\3\2\2\2 \37")
-        buf.write("\3\2\2\2!\5\3\2\2\2\"&\5\f\7\2#&\5\16\b\2$&\5\20\t\2%")
-        buf.write("\"\3\2\2\2%#\3\2\2\2%$\3\2\2\2&\7\3\2\2\2\'(\7\4\2\2(")
-        buf.write(")\7\6\2\2)\t\3\2\2\2*+\b\6\1\2+,\7\4\2\2,\62\5\n\6\5-")
-        buf.write("\60\5\6\4\2.\60\7\6\2\2/-\3\2\2\2/.\3\2\2\2\60\62\3\2")
-        buf.write("\2\2\61*\3\2\2\2\61/\3\2\2\2\62;\3\2\2\2\63\64\f\4\2\2")
-        buf.write("\64\67\t\2\2\2\658\7\17\2\2\668\5\n\6\2\67\65\3\2\2\2")
-        buf.write("\67\66\3\2\2\28:\3\2\2\29\63\3\2\2\2:=\3\2\2\2;9\3\2\2")
-        buf.write("\2;<\3\2\2\2<\13\3\2\2\2=;\3\2\2\2>?\5\22\n\2?\r\3\2\2")
-        buf.write("\2@A\7\7\2\2AF\5\22\n\2BC\7\16\2\2CE\5\22\n\2DB\3\2\2")
-        buf.write("\2EH\3\2\2\2FD\3\2\2\2FG\3\2\2\2GI\3\2\2\2HF\3\2\2\2I")
-        buf.write("J\7\b\2\2J\17\3\2\2\2KL\7\t\2\2LM\5\24\13\2MN\7\n\2\2")
-        buf.write("N\21\3\2\2\2OP\7\f\2\2PQ\7\17\2\2QR\7\16\2\2RS\7\17\2")
-        buf.write("\2ST\7\16\2\2TU\7\17\2\2UV\7\r\2\2V\23\3\2\2\2WX\7\17")
-        buf.write("\2\2XY\7\16\2\2YZ\7\17\2\2Z[\7\16\2\2[\\\7\17\2\2\\]\7")
-        buf.write("\16\2\2]^\7\17\2\2^_\7\16\2\2_`\7\17\2\2`\25\3\2\2\2\n")
-        buf.write("\35 %/\61\67;F")
+        buf.write("e\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
+        buf.write("\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\2\3\3\3\3\3\3\3\3\5\3\34")
+        buf.write("\n\3\3\3\5\3\37\n\3\3\4\3\4\3\4\5\4$\n\4\3\5\3\5\3\5\3")
+        buf.write("\5\3\5\3\5\3\5\3\5\3\5\5\5/\n\5\3\5\3\5\5\5\63\n\5\5\5")
+        buf.write("\65\n\5\3\5\3\5\3\5\3\5\5\5;\n\5\7\5=\n\5\f\5\16\5@\13")
+        buf.write("\5\3\6\3\6\3\7\3\7\3\7\3\7\7\7H\n\7\f\7\16\7K\13\7\3\7")
+        buf.write("\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3")
+        buf.write("\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\2\3\b\13\2")
+        buf.write("\4\6\b\n\f\16\20\22\2\3\3\2\3\5\2g\2\24\3\2\2\2\4\36\3")
+        buf.write("\2\2\2\6#\3\2\2\2\b\64\3\2\2\2\nA\3\2\2\2\fC\3\2\2\2\16")
+        buf.write("N\3\2\2\2\20R\3\2\2\2\22Z\3\2\2\2\24\25\5\4\3\2\25\26")
+        buf.write("\7\2\2\3\26\3\3\2\2\2\27\30\7\6\2\2\30\33\7\13\2\2\31")
+        buf.write("\34\5\6\4\2\32\34\5\b\5\2\33\31\3\2\2\2\33\32\3\2\2\2")
+        buf.write("\34\37\3\2\2\2\35\37\5\b\5\2\36\27\3\2\2\2\36\35\3\2\2")
+        buf.write("\2\37\5\3\2\2\2 $\5\n\6\2!$\5\f\7\2\"$\5\16\b\2# \3\2")
+        buf.write("\2\2#!\3\2\2\2#\"\3\2\2\2$\7\3\2\2\2%&\b\5\1\2&\'\7\f")
+        buf.write("\2\2\'(\5\b\5\2()\7\r\2\2)\65\3\2\2\2*.\7\4\2\2+/\7\6")
+        buf.write("\2\2,/\5\6\4\2-/\5\b\5\2.+\3\2\2\2.,\3\2\2\2.-\3\2\2\2")
+        buf.write("/\65\3\2\2\2\60\63\5\6\4\2\61\63\7\6\2\2\62\60\3\2\2\2")
+        buf.write("\62\61\3\2\2\2\63\65\3\2\2\2\64%\3\2\2\2\64*\3\2\2\2\64")
+        buf.write("\62\3\2\2\2\65>\3\2\2\2\66\67\f\4\2\2\67:\t\2\2\28;\7")
+        buf.write("\17\2\29;\5\b\5\2:8\3\2\2\2:9\3\2\2\2;=\3\2\2\2<\66\3")
+        buf.write("\2\2\2=@\3\2\2\2><\3\2\2\2>?\3\2\2\2?\t\3\2\2\2@>\3\2")
+        buf.write("\2\2AB\5\20\t\2B\13\3\2\2\2CD\7\7\2\2DI\5\20\t\2EF\7\16")
+        buf.write("\2\2FH\5\20\t\2GE\3\2\2\2HK\3\2\2\2IG\3\2\2\2IJ\3\2\2")
+        buf.write("\2JL\3\2\2\2KI\3\2\2\2LM\7\b\2\2M\r\3\2\2\2NO\7\t\2\2")
+        buf.write("OP\5\22\n\2PQ\7\n\2\2Q\17\3\2\2\2RS\7\f\2\2ST\7\17\2\2")
+        buf.write("TU\7\16\2\2UV\7\17\2\2VW\7\16\2\2WX\7\17\2\2XY\7\r\2\2")
+        buf.write("Y\21\3\2\2\2Z[\7\17\2\2[\\\7\16\2\2\\]\7\17\2\2]^\7\16")
+        buf.write("\2\2^_\7\17\2\2_`\7\16\2\2`a\7\17\2\2ab\7\16\2\2bc\7\17")
+        buf.write("\2\2c\23\3\2\2\2\13\33\36#.\62\64:>I")
         return buf.getvalue()
 
 
@@ -61,16 +62,15 @@ class SkyParser ( Parser ):
     RULE_root = 0
     RULE_skyline = 1
     RULE_crear = 2
-    RULE_mirall = 3
-    RULE_operacio = 4
-    RULE_simple = 5
-    RULE_compost = 6
-    RULE_aleatori = 7
-    RULE_edifici = 8
-    RULE_edaleatori = 9
+    RULE_operacio = 3
+    RULE_simple = 4
+    RULE_compost = 5
+    RULE_aleatori = 6
+    RULE_edifici = 7
+    RULE_edaleatori = 8
 
-    ruleNames =  [ "root", "skyline", "crear", "mirall", "operacio", "simple", 
-                   "compost", "aleatori", "edifici", "edaleatori" ]
+    ruleNames =  [ "root", "skyline", "crear", "operacio", "simple", "compost", 
+                   "aleatori", "edifici", "edaleatori" ]
 
     EOF = Token.EOF
     MES=1
@@ -127,9 +127,9 @@ class SkyParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_root)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 20
+            self.state = 18
             self.skyline()
-            self.state = 21
+            self.state = 19
             self.match(SkyParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -176,25 +176,25 @@ class SkyParser ( Parser ):
         localctx = SkyParser.SkylineContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_skyline)
         try:
-            self.state = 30
+            self.state = 28
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 23
+                self.state = 21
                 self.match(SkyParser.VAR)
-                self.state = 24
+                self.state = 22
                 self.match(SkyParser.ASSIG)
-                self.state = 27
+                self.state = 25
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
                 if la_ == 1:
-                    self.state = 25
+                    self.state = 23
                     self.crear()
                     pass
 
                 elif la_ == 2:
-                    self.state = 26
+                    self.state = 24
                     self.operacio(0)
                     pass
 
@@ -203,7 +203,7 @@ class SkyParser ( Parser ):
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 29
+                self.state = 27
                 self.operacio(0)
                 pass
 
@@ -251,69 +251,27 @@ class SkyParser ( Parser ):
         localctx = SkyParser.CrearContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_crear)
         try:
-            self.state = 35
+            self.state = 33
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [SkyParser.PO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 32
+                self.state = 30
                 self.simple()
                 pass
             elif token in [SkyParser.OC]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 33
+                self.state = 31
                 self.compost()
                 pass
             elif token in [SkyParser.OB]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 34
+                self.state = 32
                 self.aleatori()
                 pass
             else:
                 raise NoViableAltException(self)
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class MirallContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def MENYS(self):
-            return self.getToken(SkyParser.MENYS, 0)
-
-        def VAR(self):
-            return self.getToken(SkyParser.VAR, 0)
-
-        def getRuleIndex(self):
-            return SkyParser.RULE_mirall
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMirall" ):
-                return visitor.visitMirall(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def mirall(self):
-
-        localctx = SkyParser.MirallContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_mirall)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 37
-            self.match(SkyParser.MENYS)
-            self.state = 38
-            self.match(SkyParser.VAR)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -335,12 +293,12 @@ class SkyParser ( Parser ):
                 return self.getTypedRuleContext(SkyParser.OperacioContext,i)
 
 
+        def VAR(self):
+            return self.getToken(SkyParser.VAR, 0)
+
         def crear(self):
             return self.getTypedRuleContext(SkyParser.CrearContext,0)
 
-
-        def VAR(self):
-            return self.getToken(SkyParser.VAR, 0)
 
         def NUM(self):
             return self.getToken(SkyParser.NUM, 0)
@@ -361,43 +319,69 @@ class SkyParser ( Parser ):
         _parentState = self.state
         localctx = SkyParser.OperacioContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 8
-        self.enterRecursionRule(localctx, 8, self.RULE_operacio, _p)
+        _startState = 6
+        self.enterRecursionRule(localctx, 6, self.RULE_operacio, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 47
+            self.state = 50
             self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [SkyParser.MENYS]:
-                self.state = 41
-                self.match(SkyParser.MENYS)
-                self.state = 42
-                self.operacio(3)
+            la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
+            if la_ == 1:
+                self.state = 36
+                self.match(SkyParser.PO)
+                self.state = 37
+                self.operacio(0)
+                self.state = 38
+                self.match(SkyParser.PT)
                 pass
-            elif token in [SkyParser.VAR, SkyParser.OC, SkyParser.OB, SkyParser.PO]:
-                self.state = 45
+
+            elif la_ == 2:
+                self.state = 40
+                self.match(SkyParser.MENYS)
+                self.state = 44
+                self._errHandler.sync(self)
+                la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+                if la_ == 1:
+                    self.state = 41
+                    self.match(SkyParser.VAR)
+                    pass
+
+                elif la_ == 2:
+                    self.state = 42
+                    self.crear()
+                    pass
+
+                elif la_ == 3:
+                    self.state = 43
+                    self.operacio(0)
+                    pass
+
+
+                pass
+
+            elif la_ == 3:
+                self.state = 48
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [SkyParser.OC, SkyParser.OB, SkyParser.PO]:
-                    self.state = 43
+                    self.state = 46
                     self.crear()
                     pass
                 elif token in [SkyParser.VAR]:
-                    self.state = 44
+                    self.state = 47
                     self.match(SkyParser.VAR)
                     pass
                 else:
                     raise NoViableAltException(self)
 
                 pass
-            else:
-                raise NoViableAltException(self)
+
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 57
+            self.state = 60
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -405,34 +389,34 @@ class SkyParser ( Parser ):
                     _prevctx = localctx
                     localctx = SkyParser.OperacioContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_operacio)
-                    self.state = 49
+                    self.state = 52
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 50
+                    self.state = 53
                     _la = self._input.LA(1)
                     if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SkyParser.MES) | (1 << SkyParser.MENYS) | (1 << SkyParser.MULT))) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 53
+                    self.state = 56
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
                     if token in [SkyParser.NUM]:
-                        self.state = 51
+                        self.state = 54
                         self.match(SkyParser.NUM)
                         pass
                     elif token in [SkyParser.MENYS, SkyParser.VAR, SkyParser.OC, SkyParser.OB, SkyParser.PO]:
-                        self.state = 52
+                        self.state = 55
                         self.operacio(0)
                         pass
                     else:
                         raise NoViableAltException(self)
              
-                self.state = 59
+                self.state = 62
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -467,10 +451,10 @@ class SkyParser ( Parser ):
     def simple(self):
 
         localctx = SkyParser.SimpleContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_simple)
+        self.enterRule(localctx, 8, self.RULE_simple)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 60
+            self.state = 63
             self.edifici()
         except RecognitionException as re:
             localctx.exception = re
@@ -520,27 +504,27 @@ class SkyParser ( Parser ):
     def compost(self):
 
         localctx = SkyParser.CompostContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_compost)
+        self.enterRule(localctx, 10, self.RULE_compost)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 62
+            self.state = 65
             self.match(SkyParser.OC)
-            self.state = 63
+            self.state = 66
             self.edifici()
-            self.state = 68
+            self.state = 71
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==SkyParser.COMA:
-                self.state = 64
+                self.state = 67
                 self.match(SkyParser.COMA)
-                self.state = 65
+                self.state = 68
                 self.edifici()
-                self.state = 70
+                self.state = 73
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 71
+            self.state = 74
             self.match(SkyParser.TC)
         except RecognitionException as re:
             localctx.exception = re
@@ -581,14 +565,14 @@ class SkyParser ( Parser ):
     def aleatori(self):
 
         localctx = SkyParser.AleatoriContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_aleatori)
+        self.enterRule(localctx, 12, self.RULE_aleatori)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 73
+            self.state = 76
             self.match(SkyParser.OB)
-            self.state = 74
+            self.state = 77
             self.edaleatori()
-            self.state = 75
+            self.state = 78
             self.match(SkyParser.CB)
         except RecognitionException as re:
             localctx.exception = re
@@ -637,22 +621,22 @@ class SkyParser ( Parser ):
     def edifici(self):
 
         localctx = SkyParser.EdificiContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_edifici)
+        self.enterRule(localctx, 14, self.RULE_edifici)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 77
-            self.match(SkyParser.PO)
-            self.state = 78
-            self.match(SkyParser.NUM)
-            self.state = 79
-            self.match(SkyParser.COMA)
             self.state = 80
-            self.match(SkyParser.NUM)
+            self.match(SkyParser.PO)
             self.state = 81
-            self.match(SkyParser.COMA)
-            self.state = 82
             self.match(SkyParser.NUM)
+            self.state = 82
+            self.match(SkyParser.COMA)
             self.state = 83
+            self.match(SkyParser.NUM)
+            self.state = 84
+            self.match(SkyParser.COMA)
+            self.state = 85
+            self.match(SkyParser.NUM)
+            self.state = 86
             self.match(SkyParser.PT)
         except RecognitionException as re:
             localctx.exception = re
@@ -695,26 +679,26 @@ class SkyParser ( Parser ):
     def edaleatori(self):
 
         localctx = SkyParser.EdaleatoriContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_edaleatori)
+        self.enterRule(localctx, 16, self.RULE_edaleatori)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 85
-            self.match(SkyParser.NUM)
-            self.state = 86
-            self.match(SkyParser.COMA)
-            self.state = 87
-            self.match(SkyParser.NUM)
             self.state = 88
-            self.match(SkyParser.COMA)
+            self.match(SkyParser.NUM)
             self.state = 89
-            self.match(SkyParser.NUM)
+            self.match(SkyParser.COMA)
             self.state = 90
-            self.match(SkyParser.COMA)
-            self.state = 91
             self.match(SkyParser.NUM)
-            self.state = 92
+            self.state = 91
             self.match(SkyParser.COMA)
+            self.state = 92
+            self.match(SkyParser.NUM)
             self.state = 93
+            self.match(SkyParser.COMA)
+            self.state = 94
+            self.match(SkyParser.NUM)
+            self.state = 95
+            self.match(SkyParser.COMA)
+            self.state = 96
             self.match(SkyParser.NUM)
         except RecognitionException as re:
             localctx.exception = re
@@ -729,7 +713,7 @@ class SkyParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[4] = self.operacio_sempred
+        self._predicates[3] = self.operacio_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
