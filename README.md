@@ -66,7 +66,7 @@ __T(Merge Sort)__ és el temps que necessitem per obtenir la representació sens
 |{10000,20,3,1,10000} |   0.0280365944   |    0.1545734406    | 27.0360732079 |
 |{100000,20,3,1,10000} |  0.1801066399  |   1.2534968853    | 34.5079908371 |
 |{1000000,20,3,1,10000} |   1.0655961037  |    8.718421936    |   34.1657905579 |
-
+---
  Veiem les dades del factor __T(Merge Sort)__ confirmen quecreix a ritme de __nlog(n)__ (quasilineal) ja que cada cop que multipliquem l'entrada per 10, el T(Merge Sort) també es multiplica amb un factor aprox de __*10__. Això es correponen amb el que hem vist que hauria de complir. El temps de dibuixar no segueix creixent ja que per una certa entrada arriba al límit de rectangles que hi ha pot dibuixar a dins de l'interval. El paràmetre que segueix creixent es el T(merge sort) i el T(Aleatoris). Com que el T(Merge Sort) és dominant, la complexitat del nostre algoritme vindrà donada pel Temps que trigui el merge sort, __O(nlogn)__
  ## Construit 
  ---
