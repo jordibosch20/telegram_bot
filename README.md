@@ -52,7 +52,11 @@ Si ens hi fixem la recurrència compleix __T(n) = 2T(n/2) + O(n)__, que pel __Te
 3. __bot.py__: És un fitxer que s'encarrega de sincronitzar-se amb Telegram i dir quines funcions s'han d'executar en cada cas. Els codis són senzills. Cal destacar que les funcions __/save id__ i __/load id__ treballen amb la llibreria __pickle__. Pickle s'utilitza perquè ens permet __serialitzar objectes__. En el nostre cas __/save id__ guarda l'instància de la classe Skyline amb identificador id en un fitxer. Ens hem d'assegurar que diferents usuaris puguin guardar els mateixos id's en diferents sessions. Per això és important definir un hash entre usuaris i fitxers que en el nostre codi es fa de la seguent forma. __/save id -> guarda el fitxer chat_id + id.sky__. Com que el __chat_id__ és únic per cada usuari, som capaços de guardar mateixos identificadors en diferents sessions de manera simultània.
 __/load id__ simplement deserialitza l'objecte amb l'identificador id i el porta al 'workspace'.
 4. __Sky.g__ ens defineix la gramàtica. La majoria de regles són senzilles. Operació és la única regla més complicada ja que hem de disernir entre bastantes opcions. Fixem-nos que hem afegit '(' operacio ')' per tenir en compte que l'usuari pugui definir la prioritat a través de parèntesis. També hem fet respectar la prioritats '-'/'*'/'+-' colocant les opcions per la regla operació convenientment començant per l'esquerra.
- 
+
+## Tractament d'errors
+En el cas que l'usuari entri un edifici amb alçada negativa, la gramàtica no acceptarà ja que no hi ha "identificació" amb els TOKENS possible, per tant simplement esperarem la següent comanda.
+En el cas que l'usuari entri un edifici amb xmin més gran que xmax, el bot afegirà un Skyline buit en aquella identificació, per tant quan es cridi dibuixar amb aquest identificador no sortirà cap image per la pantalla
+
 ## Complexitat
 ---
 Hem analitzat l'entrada d'edificis aleatòria. __T(Aleatori)__ representa el temps que necessita a generar tots els edificis. Sabem que aquesta funció és O(n) ja que només recorre l'interval i crida a rand.
