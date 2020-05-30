@@ -9,7 +9,7 @@ La idea és que som capaços de definir un llenguatge que actuarà sobre diferen
 Per exemple, __a := (1,2,3)__ representa l'edifici que comença a __x = 1__, acaba a __x = 3__ i té alçada 2. 
 Tenim altres maneres de definir Skylines. Si volem definir un Skyline amb molts edificis a dins adoptarem la seguent sintaxi:
 __a := [edifici1,edifici2,...]__
-Si volem inicialitzar aleatòriament un Skylina amb n edificis on cadascun pot tenir una alçada entre 0 i h, i una amplada entre 0 i w, entre xmin i xmax ho podem fer amb la comanda {n, h, w, xmin, xmax}
+Si volem inicialitzar aleatòriament un Skyline amb n edificis on cadascun pot tenir una alçada entre 0 i h, i una amplada entre 0 i w, entre xmin i xmax ho podem fer amb la comanda {n, h, w, xmin, xmax}
 A aquest edifici li podem aplicar certes operacions que poden ser:
 - __skyline + skyline__ : Aquest operador rep dos Skylines, els superposa i retorna el nou Skyline
 -  __skyline + NUM__ : Traslladem un Skyline NUM unitats a la dreta
